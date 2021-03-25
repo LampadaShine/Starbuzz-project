@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image" href="../images/bag.gif">
+		<link rel="stylesheet" type="text/css" href="../css/form.css">
+		<title>Starbuzz Bean Machine</title>
+	</head>
+	<body>
+		<header>
+			<h1>Starbuzz Bean Machine</h1>
+			<h2>
+				Заполните следующую форму и нажмите кнопку «Заказать сейчас»,
+ 				чтобы оформить заказ
+ 			</h2>
+ 		</header>
+ 		<form action="http://starbuzzcoffee.com/processorder.php" method="post">
+ 			<div class="tablerow">
+ 				<p>Выберите кофе:</p>	
+ 				<p>
+ 					<select name="beans">
+						<option value="Смесь">Домашняя смесь</option>
+ 						<option value="Боливия">Боливия</option>
+ 						<option value="Гватемала">Гватемала</option>
+ 						<option value="Кения">Кения</option>
+ 						<option value="thembeans"> - по одному для каждого сорта кофе</option>
+ 					</select>
+				</p>
+ 			</div>
+ 			<div class="tablerow">	
+				<p>Тип:</p>
+ 					<p>
+ 						<input type="radio" name="beantype" value="молотый" > Молотый кофе<br/>
+ 						<input type="radio" name="beantype" value="зерна" checked="checked"> Кофе в зернах
+ 					</p>
+ 			</div>
+ 			<div class="tablerow">
+ 				<p>Кол-во пакетиков:</p>
+				<p><input type="number" name="bags" min="1" max="10"/></p>
+			</div>
+			<div class="tablerow">	
+ 			   <p>Дата доставки: </p>
+				<p><input type="date" name="date"/></p>
+ 			</div>
+ 			<div class="tablerow">
+ 				<p>Дополнительные услуги:</p>
+ 				<p>
+ 					<input type="checkbox" name="extras[]" value="Подарочная упаковка"> Подарочная упаковка<br/>	
+					<input type="checkbox" name="extras[]" value="каталог" checked="checked"> Доставка каталога вместе с заказом
+				</p>
+ 			</div>
+ 			<div class="tablerow">
+				<p class="heading">Доставить по адресу:</p>
+				<p></p>
+ 			</div>	
+ 			<div class="tablerow">	
+ 				<p>Имя:<br/></p>
+ 				<p><input type="text" name="name" placeholder="Иван Иванович"></p>
+			</div>
+			<div class="tablerow">		
+ 				<p>Адрес:</p>
+ 				<p><input type="text" name="adress" placeholder="ул. Пушкина 23"></p>
+ 			</div>
+ 			<div class="tablerow">
+ 				<p>Город:</p>
+ 				<p><input type="text" name="city" placeholder="Москва"></p>
+ 			</div>
+ 			<div class="tablerow">
+ 				<p>Страна:</p>
+ 				<p><input type="text" name="state" placeholder="Россия"></p>
+ 			</div>
+ 			<div class="tablerow">
+				<p>Почтовый индекс:</p>	
+				<p><input type="text" name="zip" placeholder="******"></p>
+			</div>
+			<div class="tablerow">
+ 				<p>Телефон:</p>
+ 				<p><input type="tel" name="phone" placeholder="+7(999)-999-99-99"></p>	
+			</div>
+ 			<div class="tablerow">
+ 				<p>
+ 					Комментарии<br/> 
+					клиентов:
+ 				</p>
+ 				<p><textarea name="comments"></textarea></p>
+ 			</div>
+ 			<div class="tablerow">
+ 				<p></p>		
+ 				<p><input class="value" type="submit" value="«Заказать сейчас»"></p>
+ 			</div>
+ 		</form>
+	</body>
+</html>
